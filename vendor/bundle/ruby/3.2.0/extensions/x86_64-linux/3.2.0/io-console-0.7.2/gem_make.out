@@ -1,0 +1,27 @@
+current directory: /home/muneeb/Fast-Lane-Racers-back-end/vendor/bundle/ruby/3.2.0/gems/io-console-0.7.2/ext/io/console
+/home/muneeb/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+checking for rb_io_path()... no
+checking for rb_io_descriptor()... yes
+checking for rb_io_get_write_io()... yes
+checking for rb_io_closed_p()... no
+checking for rb_io_open_descriptor()... no
+checking for termios.h... yes
+checking for cfmakeraw() in termios.h... yes
+checking for sys/ioctl.h... yes
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... yes
+creating Makefile
+
+current directory: /home/muneeb/Fast-Lane-Racers-back-end/vendor/bundle/ruby/3.2.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240417-204379-rusg0a sitelibdir\=./.gem.20240417-204379-rusg0a clean
+
+current directory: /home/muneeb/Fast-Lane-Racers-back-end/vendor/bundle/ruby/3.2.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240417-204379-rusg0a sitelibdir\=./.gem.20240417-204379-rusg0a
+compiling console.c
+linking shared-object io/console.so
+
+current directory: /home/muneeb/Fast-Lane-Racers-back-end/vendor/bundle/ruby/3.2.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240417-204379-rusg0a sitelibdir\=./.gem.20240417-204379-rusg0a install
+/usr/bin/install -c -m 0755 console.so ./.gem.20240417-204379-rusg0a/io
+
+current directory: /home/muneeb/Fast-Lane-Racers-back-end/vendor/bundle/ruby/3.2.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240417-204379-rusg0a sitelibdir\=./.gem.20240417-204379-rusg0a clean

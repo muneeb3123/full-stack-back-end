@@ -1,0 +1,30 @@
+current directory: /home/muneeb/Fast-Lane-Racers-back-end/vendor/bundle/ruby/3.2.0/gems/psych-5.1.2/ext/psych
+/home/muneeb/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+checking for yaml.h... yes
+checking for yaml_get_version() in -lyaml... yes
+creating Makefile
+
+current directory: /home/muneeb/Fast-Lane-Racers-back-end/vendor/bundle/ruby/3.2.0/gems/psych-5.1.2/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20240417-204379-s1eie7 sitelibdir\=./.gem.20240417-204379-s1eie7 clean
+cd libyaml && make clean
+/bin/sh: 1: cd: can't cd to libyaml
+make: [Makefile:283: clean-so] Error 2 (ignored)
+
+current directory: /home/muneeb/Fast-Lane-Racers-back-end/vendor/bundle/ruby/3.2.0/gems/psych-5.1.2/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20240417-204379-s1eie7 sitelibdir\=./.gem.20240417-204379-s1eie7
+compiling psych.c
+compiling psych_emitter.c
+compiling psych_parser.c
+compiling psych_to_ruby.c
+compiling psych_yaml_tree.c
+linking shared-object psych.so
+
+current directory: /home/muneeb/Fast-Lane-Racers-back-end/vendor/bundle/ruby/3.2.0/gems/psych-5.1.2/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20240417-204379-s1eie7 sitelibdir\=./.gem.20240417-204379-s1eie7 install
+/usr/bin/install -c -m 0755 psych.so ./.gem.20240417-204379-s1eie7
+
+current directory: /home/muneeb/Fast-Lane-Racers-back-end/vendor/bundle/ruby/3.2.0/gems/psych-5.1.2/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20240417-204379-s1eie7 sitelibdir\=./.gem.20240417-204379-s1eie7 clean
+cd libyaml && make clean
+/bin/sh: 1: cd: can't cd to libyaml
+make: [Makefile:283: clean-so] Error 2 (ignored)
