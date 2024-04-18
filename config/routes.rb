@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  root 'current_users#index'
   devise_for :users
   get '/isUser', to: 'users#isUser'
   namespace :api do
