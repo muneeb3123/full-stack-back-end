@@ -7,4 +7,4 @@ test:
 production:
   adapter: redis
   url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
-  channel_prefix: Fast_Lane_Racers_back_end_production
+  channel_prefix: fast_lane_racers_back_end_production
