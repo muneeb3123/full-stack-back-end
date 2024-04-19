@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  config.secret_key = 'c8ec6d01dd8b32d5968fe5759033309e6e35d104c7e4f0a93de8d22690e6739e847b2eba4ec2b822ccd7af8bdf696e47b6e799009d61cab6dbe27d99e2073a3f'
+  # config.secret_key = 'b9ce9134b02d68dc4df2cecbca3ed1a670d170c5eb5af9b8adc9516626e481dc4dc84f485052afa3f9b6a8046cf63474ae91284d56cb141d3f85733fe50dd49c'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -126,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '91530055b8ed07f6d77e826c05b4f182bedd8e0581b3a8e01525eab29e29631fae60ee9e9909b46b8fa44625f3a9a75398a7793caf148b1145e26f028f813d39'
+  # config.pepper = '2158b95904cc48bb0d7cdd5b42a4649e4c11ee856f8c0005241c2c79c34d8c4f2742fc2e66d03938d8c732cd2a17e5998e0150e40525ce3dd081507c64c0cb2d'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -263,7 +263,7 @@ Devise.setup do |config|
   # should add them to the navigational formats lists.
   #
   # The "*/*" below is required to match Internet Explorer requests.
-  # config.navigational_formats = ['*/*', :html, :turbo_stream]
+  config.navigational_formats = []
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
@@ -299,7 +299,7 @@ Devise.setup do |config|
   # ==> Hotwire/Turbo configuration
   # When using Devise with Hotwire/Turbo, the http status for error responses
   # and some redirects must match the following. The default in Devise for existing
-  # apps is `200 OK` and `302 Found respectively`, but new apps are generated with
+  # apps is `200 OK` and `302 Found` respectively, but new apps are generated with
   # these new defaults that match Hotwire/Turbo behavior.
   # Note: These might become the new default in future versions of Devise.
   config.responder.error_status = :unprocessable_entity

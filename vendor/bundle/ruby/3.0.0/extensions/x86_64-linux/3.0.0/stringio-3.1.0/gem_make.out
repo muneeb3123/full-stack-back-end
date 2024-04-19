@@ -1,5 +1,5 @@
 current directory: /home/muneeb/Fast-Lane-Racers-back-end/vendor/bundle/ruby/3.0.0/gems/stringio-3.1.0/ext/stringio
-/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240118-440215-neji4d.rb extconf.rb
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240419-392759-k61kkr.rb extconf.rb
 creating Makefile
 
 current directory: /home/muneeb/Fast-Lane-Racers-back-end/vendor/bundle/ruby/3.0.0/gems/stringio-3.1.0/ext/stringio
@@ -12,4 +12,4 @@ linking shared-object stringio.so
 
 current directory: /home/muneeb/Fast-Lane-Racers-back-end/vendor/bundle/ruby/3.0.0/gems/stringio-3.1.0/ext/stringio
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 stringio.so ./.gem.20240118-440215-2hz057
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20240419-392759-fz74df
