@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
 
-  root 'current_users#index'
-  devise_for :users
-  get '/isUser', to: 'users#isUser'
-  namespace :api do
-    namespace :v1 do
-      devise_scope :user do
-        get 'isUser', to: 'users/sessions#isUser'
-      end
-      devise_for :users, controllers: {
-        sessions: 'api/v1/users/sessions',
-        registrations: 'api/v1/users/registrations'
-      }
-    end
-  end
+  get '/current_user', to: 'current_users#index'
+
+  devise_for :users, path:'', path_names: {
+    sign_in: 'login',
+    sign_out: 'logout',
+    registration: 'signup'
+  },
+  controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
+
 end

@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'bde39ca44f765c49c25018a85311cbe0be0b5016929b95b54857853d6aaf5787d5985fdd22ec8a61a3fb608329300aca8538f13fd7ef7b1054280d572133b192'
+  # config.secret_key = 'b9ce9134b02d68dc4df2cecbca3ed1a670d170c5eb5af9b8adc9516626e481dc4dc84f485052afa3f9b6a8046cf63474ae91284d56cb141d3f85733fe50dd49c'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -126,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'a5d0fac8c7b63b1eb17451b45dff6113f9f138f15225ad94f692f2f7c8fe606ccc629427be8bbdf7a6d0b76c360d2bd0c6790ea0982bd9fe73ac56489cfe62e9'
+  # config.pepper = '2158b95904cc48bb0d7cdd5b42a4649e4c11ee856f8c0005241c2c79c34d8c4f2742fc2e66d03938d8c732cd2a17e5998e0150e40525ce3dd081507c64c0cb2d'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -263,7 +263,7 @@ Devise.setup do |config|
   # should add them to the navigational formats lists.
   #
   # The "*/*" below is required to match Internet Explorer requests.
-  # config.navigational_formats = ['*/*', :html, :turbo_stream]
+  config.navigational_formats = []
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
@@ -310,4 +310,14 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+  config.jwt do |jwt|
+    jwt.secret = Rails.application.credentials.fetch(:secret_key_base)
+    jwt.dispatch_requests = [
+      ['POST', %r{^/login$}]
+    ]
+    jwt.revocation_requests = [
+      ['DELETE', %r{^/logout$}]
+    ]
+    jwt.expiration_time = 1.day.to_i
+end
 end
