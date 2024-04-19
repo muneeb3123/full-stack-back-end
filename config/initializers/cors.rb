@@ -1,6 +1,6 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "https://fast-lane-racers-back-end-1.onrender.com"
+    origins "https://fast-lane-racers.netlify.app/"
 
     resource "*",
       headers: :any,
