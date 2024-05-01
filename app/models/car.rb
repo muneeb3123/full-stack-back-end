@@ -10,5 +10,4 @@ class Car < ApplicationRecord
   validates :duration, presence: true
   validates :apr, presence: true
   validates :color, presence: true
-  validates :image, presence: true
 end
