@@ -10,4 +10,8 @@ class Car < ApplicationRecord
   validates :duration, presence: true
   validates :apr, presence: true
   validates :color, presence: true
+
+  def image_url
+    Rails.application.routes.url_helpers.url_for(image) if image.attached?
+end
 end
