@@ -9,7 +9,7 @@ class CarsController < ApplicationController
   
     def show
       @car = Car.find(params[:id])
-      render json: [CarSerializer.new(@car).serializable_hash.to_json]
+      render json: CarSerializer.new(@car).serializable_hash.to_json
     end
   
     def new
