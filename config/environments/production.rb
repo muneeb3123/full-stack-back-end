@@ -4,6 +4,19 @@ Rails.application.routes.default_url_options = {
 }
 
 Rails.application.configure do
+  config.action_mailer.default_url_options = { host: 'fast-lane-racers-back-end-1.onrender.com', port: 3000 }
+  config.enable_reloading = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:         'smtp.gmail.com',
+    port:            587,
+    domain:          '127.0.0.1:3000',
+    user_name:       'rehmanmuneeb66@gmail.com',
+    password:        'hctghbagsbqmavbt',
+    authentication:  'plain',
+    enable_starttls: true,
+    open_timeout:    5,
+    read_timeout:    5 }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -90,4 +103,6 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  config.action_mailer.raise_delivery_errors = true
+
 end

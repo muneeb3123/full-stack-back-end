@@ -25,6 +25,8 @@ class ReservationsController < ApplicationController
     def create
       @reserve = current_user.reservations.new(reservation_params)
       if @reserve.save
+        @car = Car.find(@reserve.car_id)
+        ReservedMailer.with(user: current_user, reservation: @reserve, car: @car.name).car_reserved.deliver_later
         render json: { response: 'Successfully added to reservation' }
       else
         render json: @reserve.errors.full_messages, status: :unprocessable_entity

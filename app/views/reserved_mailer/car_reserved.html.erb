@@ -1,0 +1,23 @@
+ <h1><%= @car %> Reserved</h1>
+
+  <p>
+    <%= @greeting %>,
+  </p>
+
+  <p>
+    We're excited to inform you that a car has been reserved for you.
+  </p>
+
+  <h2>Reservation Details</h2>
+  <ul>
+    <li>User Name: <%= @user.name %></li>
+    <li>User Email: <%= @user.email %></li>
+    <li>City: <%= @reservation.city %></li>
+    <li>Date: <%= @reservation.date.strftime("%A, %d %B %Y") %></li>
+  </ul>
+
+  <p>
+    If you have any questions or concerns, please feel free to contact us.
+  </p>
+
+  <p>
