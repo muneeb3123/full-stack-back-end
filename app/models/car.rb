@@ -1,5 +1,6 @@
 class Car < ApplicationRecord
     has_many :reservations, dependent: :destroy
+    has_one_attached :image
 
   validates :name, presence: true
   validates :description, presence: true
@@ -9,5 +10,8 @@ class Car < ApplicationRecord
   validates :duration, presence: true
   validates :apr, presence: true
   validates :color, presence: true
-  validates :image, presence: true
+
+  def image_url
+    Rails.application.routes.url_helpers.url_for(image) if image.attached?
+end
 end

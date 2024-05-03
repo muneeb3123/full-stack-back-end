@@ -4,12 +4,12 @@ class CarsController < ApplicationController
   
     def index
       @cars = Car.all
-      render json: @cars
+      render json: CarSerializer.new(@cars).serializable_hash.to_json
     end
   
     def show
       @car = Car.find(params[:id])
-      render json: [@car]
+      render json: CarSerializer.new(@car).serializable_hash.to_json
     end
   
     def new
@@ -19,7 +19,7 @@ class CarsController < ApplicationController
     def create
       @car = Car.new(car_params)
       if @car.save
-        render json: { data: @car, message: 'Car created successfully' }
+        render json: { data:  CarSerializer.new(@car).serializable_hash.to_json, message: 'Car created successfully' }
       else
         render json: { error: @car.errors.full_messages }
       end
